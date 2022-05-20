@@ -83,7 +83,7 @@ class _TarjetaImagen extends StatelessWidget {
       margin: const EdgeInsets.symmetric(vertical: 10),
       child: ClipRRect(
         borderRadius: const BorderRadius.only(topLeft: Radius.circular(50),bottomRight: Radius.circular(50)),
-        child: (noticia.url != null) 
+        child: (noticia.urlToImage != null) 
           ? FadeInImage(
             placeholder: const AssetImage('assets/giphy.gif'),
             image: NetworkImage('${noticia.urlToImage}')

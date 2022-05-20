@@ -13,7 +13,11 @@ class Tab1Screen extends StatelessWidget {
 
     final newsService = Provider.of<NewsService>(context);
     return Scaffold(
-      body: ListaNoticias(noticias: newsService.headlines),
+      body: newsService.headlines.isEmpty
+        ? const Center(
+            child: CircularProgressIndicator(),
+        )
+        : ListaNoticias(noticias: newsService.headlines),
     );
   }
 }
